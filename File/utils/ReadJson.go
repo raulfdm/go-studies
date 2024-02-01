@@ -13,7 +13,3 @@ func ReadJson(filename string) (string, error) {
 
 	return string(content), nil
 }
-
-func WriteJson(filename string, data string) {
-	// write data to file
-}
