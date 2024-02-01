@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	content := file_utils.ReadJson("./data/file.json")
+	content, _ := file_utils.ReadJson("./data/file.json")
 
 	fmt.Println(content)
 }
