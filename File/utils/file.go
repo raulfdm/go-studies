@@ -14,6 +14,6 @@ func ReadJson(filename string) string {
 	return string(content)
 }
 
-func writeJson(filename string, data string) {
+func WriteJson(filename string, data string) {
 	// write data to file
 }

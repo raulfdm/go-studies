@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	file_utils "studies.com/file/file-utils"
+	file_utils "studies.com/file/utils"
 )
 
 func main() {
