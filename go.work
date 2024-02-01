@@ -1,1 +1,7 @@
 go 1.21.6
+
+use (
+	./Calculator
+	./InputOutput
+	./File
+)
