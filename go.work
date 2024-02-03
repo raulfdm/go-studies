@@ -8,5 +8,6 @@ use (
 	./HttpExample
 	./InputOutput
 	./Structs
+	./Test
 	./Types
 )
