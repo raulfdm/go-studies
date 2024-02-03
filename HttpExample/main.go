@@ -10,6 +10,7 @@ import (
 	"studies.com/httpexample/data"
 )
 
+// https://rickandmortyapi.com/documentation/#get-a-single-character
 const apiURL = "https://rickandmortyapi.com/api/character/1"
 
 func main() {
