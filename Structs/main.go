@@ -2,20 +2,13 @@ package main
 
 import (
 	"fmt"
-	"time"
+
+	models "studies.com/structs/models"
 )
 
-type User struct {
-	name        string
-	yearOfBirth int
-}
-
-func (user User) CalculateAge() int {
-	return time.Now().Year() - user.yearOfBirth
-}
-
 func main() {
-	user := User{name: "John", yearOfBirth: 1990}
 
-	fmt.Printf("User %s, born in %d, is probably %d years old", user.name, user.yearOfBirth, user.CalculateAge())
+	user := models.User{Name: "John", YearOfBirth: 1990}
+
+	fmt.Printf("User %s, born in %d, is probably %d years old", user.Name, user.YearOfBirth, user.CalculateAge())
 }
