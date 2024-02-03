@@ -1,6 +1,9 @@
-package user
+package models
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 type User struct {
 	Name        string
@@ -9,4 +12,8 @@ type User struct {
 
 func (user User) CalculateAge() int {
 	return time.Now().Year() - user.YearOfBirth
+}
+
+func (user User) String() string {
+	return fmt.Sprintf("--- %v ----\n - Born in %v", user.Name, user.YearOfBirth)
 }
