@@ -1,0 +1,3 @@
+module studies.com/structs
+
+go 1.21.6
