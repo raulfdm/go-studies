@@ -5,6 +5,7 @@ use (
 	./CryptoMasters
 	./File
 	./Goroutine
+	./HttpExample
 	./InputOutput
 	./Structs
 	./Types
