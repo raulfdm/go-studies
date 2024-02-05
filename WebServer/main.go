@@ -8,12 +8,11 @@ import (
 func main() {
 	server := http.NewServeMux()
 
-	server.HandleFunc("/api/hello", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/json")
-		w.Write([]byte(`{"message": "Hello World"}`))
-	})
+	staticServer := http.FileServer(http.Dir("./wwwroot"))
 
-	err := http.ListenAndServe(":3000", server)
+	server.Handle("/", staticServer)
+
+	err := http.ListenAndServe(":80", server)
 
 	if err != nil {
 		fmt.Println("Something went wrong while trying to boot the server")
