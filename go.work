@@ -11,4 +11,5 @@ use (
 	./Test
 	./Types
 	./RestAPI
+	./WebServer
 )
