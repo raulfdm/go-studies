@@ -3,15 +3,14 @@ package main
 import (
 	"fmt"
 	"net/http"
+
+	"studies.com/rest-api/api"
 )
 
 func main() {
 	server := http.NewServeMux()
 
-	server.HandleFunc("/api/hello", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/json")
-		w.Write([]byte(`{"message": "Hello World"}`))
-	})
+	server.HandleFunc("/api/posts", api.Get)
 
 	err := http.ListenAndServe(":3000", server)
 
