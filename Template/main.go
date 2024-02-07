@@ -44,7 +44,7 @@ func renderPosts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	temp.Execute(w, data.GetPosts()[0])
+	temp.Execute(w, data.GetPosts())
 
 	w.WriteHeader(http.StatusOK)
 }

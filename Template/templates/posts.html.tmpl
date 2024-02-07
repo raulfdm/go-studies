@@ -10,12 +10,14 @@
   <a href="/">Home</a>
 
   <ul>
-    <li>
-      <article>
-        <h2>{{ .Title }}</h2>
-        <span>{{ .Author }}</span>
-      </article>
-    </li>
+    {{ range . }}
+      <li>
+        <article>
+          <h2>{{ .Title }}</h2>
+          <span>{{ .Author }}</span>
+        </article>
+      </li>
+    {{ end }}
   </ul>
 
 </body>

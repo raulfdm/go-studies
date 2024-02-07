@@ -27,4 +27,10 @@ var listOfPosts = []BlogPost{
 		Content:       "This is the second post on this blog. I hope you enjoy it!",
 		DatePublished: time.Date(2020, 1, 2, 0, 0, 0, 0, time.UTC),
 	},
+	{
+		Title:         "Third Post",
+		Author:        "John Doe",
+		Content:       "This is the third post on this blog. I hope you enjoy it!",
+		DatePublished: time.Date(2020, 1, 3, 0, 0, 0, 0, time.UTC),
+	},
 }
