@@ -7,9 +7,10 @@ use (
 	./Goroutine
 	./HttpExample
 	./InputOutput
+	./RestAPI
 	./Structs
+	./Template
 	./Test
 	./Types
-	./RestAPI
 	./WebServer
 )
