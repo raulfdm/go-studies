@@ -13,6 +13,7 @@ func main() {
 
 	server.HandleFunc("/", renderIndexHtml)
 	server.HandleFunc("/posts", renderPosts)
+	server.HandleFunc("/ifelse", renderIfElse)
 
 	err := http.ListenAndServe(":80", server)
 
@@ -45,6 +46,25 @@ func renderPosts(w http.ResponseWriter, r *http.Request) {
 	}
 
 	temp.Execute(w, data.GetPosts())
+
+	w.WriteHeader(http.StatusOK)
+}
+
+func renderIfElse(w http.ResponseWriter, r *http.Request) {
+	temp, err := template.ParseFiles("templates/ifelse.html.tmpl")
+
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte("Internal Server Error"))
+		return
+	}
+
+	user := data.User{
+		Name:       "John Doe",
+		IsLoggedIn: false,
+	}
+
+	temp.Execute(w, user)
 
 	w.WriteHeader(http.StatusOK)
 }
