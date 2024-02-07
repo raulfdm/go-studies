@@ -13,7 +13,7 @@ func Get(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-type BlogPost struct {
+type blogPost struct {
 	Title         string
 	Author        string
 	Content       string
@@ -21,7 +21,7 @@ type BlogPost struct {
 }
 
 // hardcoded posts
-var listOfPosts = []BlogPost{
+var listOfPosts = []blogPost{
 	{
 		Title:         "First Post",
 		Author:        "John Doe",
